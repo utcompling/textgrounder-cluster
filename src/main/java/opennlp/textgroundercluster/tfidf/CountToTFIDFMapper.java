@@ -51,13 +51,7 @@ public class CountToTFIDFMapper {
         result.append(lineTokens[1]);
         result.append("\t");
         String[] wordCountTokens;
-        if(lineTokens.length == 3)  {
-            wordCountTokens = lineTokens[2].split("\\s");
-        }      else if (lineTokens.length == 10) {
-            wordCountTokens = lineTokens[9].split("\\s");
-        } else {
-            throw new InvalidParameterException(line);
-        }
+        wordCountTokens = lineTokens[lineTokens.length - 1].split("\\s");
         StringBuilder wordCountBuilder = new StringBuilder();
         for (String wordCountToken : wordCountTokens) {
             String[] wordCount = wordCountToken.trim().split(":");

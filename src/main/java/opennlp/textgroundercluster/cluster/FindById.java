@@ -1,4 +1,4 @@
-package fogbow.eskiles;
+package opennlp.textgroundercluster.cluster;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

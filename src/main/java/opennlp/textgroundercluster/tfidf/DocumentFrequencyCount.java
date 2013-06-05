@@ -31,30 +31,15 @@ public class DocumentFrequencyCount {
             wordsInDocument = new HashSet<String>();
             //System.out.print("Line: " + line);
             String[] lineTokens = line.split("\t");
-            if(lineTokens.length == 3){
-                String[] wordTokens = lineTokens[2].split(" ");
-                for (String wordCount : wordTokens) {
-                    final String[] wordCountSplit = wordCount.split(":");
-                    wordsInDocument.add(wordCountSplit[0]);
-                }
+            String[] wordTokens = lineTokens[lineTokens.length -1].split(" ");
+            for (String wordCount : wordTokens) {
+                final String[] wordCountSplit = wordCount.split(":");
+                wordsInDocument.add(wordCountSplit[0]);
+            }
 
-                for (String wordType : wordsInDocument) {
-                    word.set(wordType);
-                    context.write(word, one);
-                }
-            } else if(lineTokens.length == 10) {
-                String[] wordTokens = lineTokens[9].split(" ");
-                for (String wordCount : wordTokens) {
-                    final String[] wordCountSplit = wordCount.split(":");
-                    wordsInDocument.add(wordCountSplit[0]);
-                }
-
-                for (String wordType : wordsInDocument) {
-                    word.set(wordType);
-                    context.write(word, one);
-                }
-            } else {
-System.out.println("Failed to parse:\n" + line);
+            for (String wordType : wordsInDocument) {
+                word.set(wordType);
+                context.write(word, one);
             }
         }
     }

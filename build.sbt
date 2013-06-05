@@ -6,7 +6,7 @@ seq(com.github.retronym.SbtOneJar.oneJarSettings: _*)
 
 name := "textgrounder-cluster"
 
-version := "0.0.2"
+version := "0.0.1"
 
 scalaVersion := "2.9.2"
 
