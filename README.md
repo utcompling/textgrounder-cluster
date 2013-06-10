@@ -14,7 +14,7 @@ Clone the repository
 
         git clone https://github.com/eskiles/textgrounder-cluster.git
 
-Add the base directory to the path.
+Set the TEXTGROUNDER_CLUSTER variable.
 
         export TEXTGROUNDER_CLUSTER=$HOME/utcompling/textgrounder-cluster
 
