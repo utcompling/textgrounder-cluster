@@ -12,7 +12,7 @@ This project is intended to work with textgrounder and data prepared for textgro
 
 Clone the repository
 
-        git clone https://github.com/eskiles/textgrounder-cluster.git
+        git clone https://github.com/utcompling/textgrounder-cluster.git
 
 Set the TEXTGROUNDER_CLUSTER variable.
 
