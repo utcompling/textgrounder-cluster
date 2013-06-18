@@ -26,7 +26,7 @@ Build with sbt
 
 The cluster.py script will cluster the training data in the specified directory into a number of clusters.  The training data needs to have the word training in the file name.
 
-        src/main/python/cluster.py [TARGET_DIRECTORY] [NUMBER_OF_CLUSTERS]
+        src/main/python/cluster.py -i [TARGET_DIRECTORY] -k [NUMBER_OF_CLUSTERS]
 
 
 The training schema file is not currently used.  The first column is assumed to be the id and the last column is assumed to be the counts.  Need to update the code to use the schema.
